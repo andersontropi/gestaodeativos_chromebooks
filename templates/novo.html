@@ -1,0 +1,38 @@
+{% extends "template.html" %} {% block conteudo %}
+<div class="page-header">
+  <h1>{{ titulo }}</h1>
+</div>
+<form action="/inserir" method="post">
+  <fieldset>
+    <div class="form-group">
+      <label for="numero_serie">Numero de série</label>
+      <input
+        type="text"
+        id="numero_serie"
+        name="numero_serie"
+        class="form-control"
+      />
+    </div>
+    <div class="form-group">
+      <label for="fabricante_equip">Fabricante</label>
+      <input
+        type="text"
+        id="fabricante_equip"
+        name="fabricante_equip"
+        class="form-control"
+      />
+    </div>
+    <div class="form-group">
+      <label for="ident_func_alun">Nome do funcionário/aluno</label>
+      <input
+        type="text"
+        id="ident_func_alun"
+        name="ident_func_alun"
+        class="form-control"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary btn-salvar">Salvar</button>
+  </fieldset>
+</form>
+
+{% endblock %}
