@@ -1,11 +1,8 @@
-######### Arquivo principal #######
 from flask import Flask, render_template, request, redirect, session, flash, url_for
-
 from flask_sqlalchemy import SQLAlchemy
-
 from sqlalchemy.sql import text
-
 from datetime import datetime
+
 
 app = Flask(__name__)                    #### default ####
 
@@ -122,8 +119,8 @@ def busca():
 
 
 if __name__ == '__main__':                #### Garante que a aplicação importe as configurações ####
-    app.run(host="192.168.100.26", port=5000, debug=True)
-    #app.run(debug=True)                   #     não precisa reiniciar o sevidor     #
+    #app.run(host="192.168.100.26", port=5000, debug=True)
+    app.run(debug=True)                   #     não precisa reiniciar o sevidor     #
 
 #preparar deploy seguir abaixo
 #Procfile como arquivo de texto conteudo: web: gunicorn meu_site: app
