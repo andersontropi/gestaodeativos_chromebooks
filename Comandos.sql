@@ -1,3 +1,5 @@
+/*
+
 CREATE DATABASE	satelite_prd;
 
 USE satelite_prd;
